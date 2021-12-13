@@ -209,7 +209,7 @@
 
     <!-- Contact -->
 
-    <div class="block bg-white rounded-lg py-4 flex shadow-lg" id="contact">
+    <!-- <div class="block bg-white rounded-lg py-4 flex shadow-lg" id="contact">
         <div class="border border-purple-400 border-l-8 rounded-lg items-center m-6 py-20 px-10 w-full">
             <div class="flex items-center">
                 <h1 class="text-6xl">
@@ -219,7 +219,7 @@
             </div>
             <div class="bg-gray-200 my-16">
                 <div class="" x-data="getData()">
-                    <!-- modal starts -->
+                    
 
                     <div x-show.transition="status || isError" style="background-color: rgb(0,0,0, .5)" class="w-full h-full flex items-center 
                 shadow-lg ">
@@ -238,15 +238,16 @@
                             </div>
                         </div>
                     </div>
-                    <!-- modal ends -->
 
-                    <!-- form container starts -->
+
+
                     <div x-show="!status && !isError" class="relative h-screen flex flex-wrap items-center">
                         <div class="w-full relative">
 
                             <div class="mt-6">
                                 <div class="text-center font-semibold text-black text-2xl"> SignUp </div>
-                                <!-- registration form starts-->
+
+
 
                                 <form action="/register" method="POST" class="mt-8" @submit.prevent="submitData">
                                     <div class="mx-auto max-w-lg ">
@@ -267,11 +268,10 @@
                                         </div>
 
 
-                                        <!-- validation starts -->
+
 
                                         <div class="flex justify-start mt-3 ml-4 p-1">
                                             <ul>
-                                                <!-- Validate Email -->
                                                 <li x-show="formData.email.length > 0" class="flex items-center py-1">
                                                     <div :class="{'bg-green-200 text-green-700': isEmail(formData.email),
                            'bg-red-200 text-red-700': !isEmail(formData.email)}"
@@ -291,7 +291,7 @@
                             'Email is valid' : 'Email is not valid!' "></span>
                                                 </li>
 
-                                                <!-- Validate Password -->
+
                                                 <li x-show="formData.password.length > 0"
                                                     class="flex items-center py-1">
                                                     <div :class="{'bg-green-200 text-green-700': formData.password.length > 7,
@@ -317,7 +317,6 @@
 
                                             </ul>
                                         </div>
-                                        <!-- validation ends -->
 
                                         <button class="mt-3 text-lg font-bold  w-full 
                     rounded-lg px-6 py-3 block shadow-xl hover:text-white hover:bg-black" x-text="buttonLabel"
@@ -325,18 +324,19 @@
                                         </button>
                                     </div>
                                 </form>
-                                <!-- registration form ends -->
+
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- form container ends -->
+
 
             </div>
         </div>
         <div class="my-16" id="timeline" style="height: 480px"></div>
 
-    </div>
+    </div> -->
 
 
 </div>
