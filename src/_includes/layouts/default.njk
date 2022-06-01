@@ -44,7 +44,7 @@ SITEURL: https://localhost:8080
 <body class="antialiased bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 w-auto">
 
 
-    <nav class="text-gray-700 bg-white mx-auto">
+    <!-- <nav class="text-gray-700 bg-base-100 mx-auto">
         <div class="flex justify-start items-center space-x-20 mx-auto shadow-lg">
             <a href="/" class="py-4 px-16 border-transparent">
                 <img src="/static/images/MasterServerTransparent.png" alt="Logo" class="object-fill h-6">
@@ -71,6 +71,38 @@ SITEURL: https://localhost:8080
             </div>
         </div>
     </nav>
+ -->
+    <nav class="navbar bg-base-100">
+        <div class="flex-none">
+                <a href="/" class="py-4 px-12 border-transparent">
+                    <img src="/static/images/MasterServerTransparent.png" alt="Logo" class="object-fill h-8">
+                </a>
+        </div>
+        <div class="flex-1 h-full" x-data="categories">
+            <template x-for="category in categories">
+                <a x-bind:href="'#' + category.link"
+                    class="transition duration-200 ease-in-out py-4 px-12 border-b-2 border-transparent hover:text-pink-400 hover:border-purple-400"
+                    x-text="category.name"></a>
+            </template>
+        </div>
+        <div class="flex-none">
+            <div class="drawer drawer-end">
+                <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+                <div class="drawer-content">
+                    <!-- Page content here -->
+                    <label for="my-drawer-4" class="drawer-button btn btn-primary">Open drawer</label>
+                </div>
+                <div class="drawer-side">
+                    <label for="my-drawer-4" class="drawer-overlay"></label>
+                    <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                        <!-- Sidebar content here -->
+                        <li><a>Sidebar Item 1</a></li>
+                        <li><a>Sidebar Item 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 
     {{ content | safe }}
@@ -86,7 +118,7 @@ SITEURL: https://localhost:8080
     <div class="flex justify-center items-center mx-auto shadow-lg">
         <div>
             <div id="footer_menu"
-                class="w-full block flex-grow w-auto grid gap-10 gap-11 grid-cols-2 items-center justify-items-center mx-auto flex-grow p-12">
+                class="w-auto flex-grow grid gap-10 grid-cols-2 items-center justify-items-center mx-auto p-12">
                 <div class="h-full">
                     <h3>FOLLOW ME</h3>
                     <ul class="py-4 items-center grid gap-2 flex-grow grid-cols-2 justify-items-center">
