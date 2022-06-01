@@ -196,6 +196,9 @@ const projects = [
     }
 ];
 
+const technologies = ['Proxmox', 'Kubernetes', 'Docker', 'VirtualBox', 'Wfuzz', 'Burp', 'Rainbowcrack', 'Cutter', 'Ghidra', 'GDB', 'HTML', 'JavaScript', 'Node', 'Yarn', 'PHP', 'Assembly', 'Python', 'Flask', 'TailwindCSS', 'CSS', 'MySQL', 'Postgresql', 'InfluxDB', 'Grafana', 'GNS3', 'MS-DOS', 'Windows', 'Linux', 'NginX', 'Apache', 'TomEE', 'AWS', 'VisualVM', 'ReadTheDocs', 'Trello', 'Minecraft', 'Git', 'Ansible']
+
+
 function getData() {
     return {
         formData: {

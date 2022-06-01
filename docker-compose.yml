@@ -1,0 +1,12 @@
+services:
+  node:
+    container_name: 'node'
+    image: 'node:lts'
+    command: 'yarn run serve'
+    ports:
+      - '8080:8080'
+    working_dir: '/app'
+    volumes:
+      - type: bind
+        source: ./
+        target: /app
