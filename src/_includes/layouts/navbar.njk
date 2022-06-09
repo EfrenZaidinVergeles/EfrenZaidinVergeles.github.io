@@ -1,0 +1,19 @@
+<nav class="navbar bg-base-100">
+    <div class="flex-none">
+        <a href="/" class="py-4 px-12 border-transparent">
+            <img src="/static/images/MasterServerTransparent.png" alt="Logo" class="object-fill h-8">
+        </a>
+    </div>
+    <div class="flex-1 h-full" x-data="categories">
+        <template x-for="category in categories">
+            <a x-bind:href="category.link"
+                class="hidden lg:block transition duration-200 ease-in-out py-4 px-12 border-b-2 border-transparent hover:text-pink-400 hover:border-purple-400"
+                x-text="category.name"></a>
+        </template>
+    </div>
+    <div class="flex-none lg:hidden">
+        <label for="my-drawer" class="btn btn-square drawer-button bg-gray-400">
+            <i class="fa fa-2x fa-bars"></i>
+        </label>
+    </div>
+</nav>

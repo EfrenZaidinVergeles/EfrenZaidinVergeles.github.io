@@ -1,4 +1,5 @@
 ---
+title: Efren Garcia
 layout: layouts/default.njk
 ---
 
@@ -92,7 +93,7 @@ layout: layouts/default.njk
                     <li>
                         <div class="transition duration-500 ease-in-out hover:bg-purple-200">
                             <div
-                                class="transition duration-300 ease-in-out bg-white border border-indigo-400 border-l-8 hover:border-b-8 hover:border-purple-600 transform hover:translate-x-2 hover:-translate-y-2 flex justify-between items-center w-auto">
+                                class="transition duration-300 ease-in-out bg-white border border-indigo-400 border-l-8 hover:border-b-8 hover:border-purple-600 hover:translate-x-2 hover:-translate-y-2 flex justify-between items-center w-auto">
                                 <p class="text-2xl block m-4" x-text="item"></p>
                                 <img x-bind:src="'static/images/' + item + '.svg'" x-bind:alt="'item'"
                                     class="h-12 w-12 mr-4">
@@ -160,21 +161,22 @@ layout: layouts/default.njk
                 x-data="{ projects }">
                 <template x-for="project in projects">
                     <div
-                        class="group transform bg-white shadow-2xl rounded-b-xl -skew-y-12 transition ease-in-out delay-75 duration-300 hover:skew-y-0  hover:z-10 my-16">
+                        class="group bg-white shadow-2xl rounded-b-xl -skew-y-12 transition ease-in-out delay-75 duration-300 hover:skew-y-0  hover:z-10 my-16">
                         <a x-bind:href="project.link" target="_blank">
                             <img x-bind:src="'static/images/' + project.image" x-bind:alt="name">
                         </a>
                         <div
                             class="p-4 text-center border-t-4 transition ease-in-out delay-75 duration-300 group-hover:border-indigo-400">
-                            <a x-bind:href="project.link" class="text-2xl group-hover:text-pink-400" target="_blank"
-                                x-text="project.name">
-                            </a>
-                            <p class="transform transition-all ease-in-out delay-1000 duration-500 mt-4 hidden group-hover:block"
+                            <h4 class="mb-4"><a x-bind:href="project.link" class="text-2xl group-hover:text-pink-400"
+                                    target="_blank" x-text="project.name">
+                                </a>
+                            </h4>
+                            <p class="transition-all ease-in-out delay-1000 duration-500 mb-4 hidden group-hover:block"
                                 x-text="project.description">
                             </p>
-                            <div class="flex flex-inline my-6">
+                            <div class="flex flex-wrap gap-2 justify-center flex-column">
                                 <template x-for="category in project.categories">
-                                    <div class="ml-2 border border-pink-400 rounded-full p-2 animate-pulse group-hover:animate-none"
+                                    <div class="border border-pink-400 rounded-full p-2 animate-pulse group-hover:animate-none"
                                         x-bind:class="'border-' + category.color + '-400'">
                                         <span x-text="category.name"></span>
                                     </div>
@@ -204,9 +206,3 @@ layout: layouts/default.njk
 
 
 </div>
-
-
-
-<script src="static/js/Alpine.js"></script>
-<script src="static/js/GoogleChart.js"></script>
-<script src="static/js/Graph.js"></script>

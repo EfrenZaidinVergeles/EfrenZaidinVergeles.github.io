@@ -1,4 +1,5 @@
 # EfrenZaidinVergeles.github.io
 
 
-To automatically refresh changed files, run 'invoke regenerate'
+To run the dev server, run: yarn run serve
+To build the assets, run: yarn run build

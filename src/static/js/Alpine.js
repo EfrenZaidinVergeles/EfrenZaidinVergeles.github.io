@@ -1,28 +1,24 @@
 const categories = [
     {
         name: "About Me",
-        link: "about_me"
+        link: "#about_me"
     },
     {
         name: "Skills",
-        link: "skills"
+        link: "#skills"
     },
     {
         name: "Technologies",
-        link: "technologies"
+        link: "#technologies"
     },
     {
         name: "Projects",
-        link: "projects"
+        link: "#projects"
     },
-    // {
-    //     name: "Contact",
-    //     link: "contact"
-    // },
-    // {
-    //     name: "Blog",
-    //     link: "blog"
-    // }
+    {
+        name: "Blog",
+        link: "/blog"
+    }
 ]
 
 const slides = [
@@ -196,7 +192,7 @@ const projects = [
     }
 ];
 
-const technologies = ['Proxmox', 'Kubernetes', 'Docker', 'VirtualBox', 'Wfuzz', 'Burp', 'Rainbowcrack', 'Cutter', 'Ghidra', 'GDB', 'HTML', 'JavaScript', 'Node', 'Yarn', 'PHP', 'Assembly', 'Python', 'Flask', 'TailwindCSS', 'CSS', 'MySQL', 'Postgresql', 'InfluxDB', 'Grafana', 'GNS3', 'MS-DOS', 'Windows', 'Linux', 'NginX', 'Apache', 'TomEE', 'AWS', 'VisualVM', 'ReadTheDocs', 'Trello', 'Minecraft', 'Git', 'Ansible', 'Serverless']
+const technologies = ['Proxmox', 'Kubernetes', 'Docker', 'VirtualBox', 'Wfuzz', 'Burp', 'Rainbowcrack', 'Cutter', 'Ghidra', 'GDB', 'HTML', 'JavaScript', 'Node', 'Yarn', 'PHP', 'Assembly', 'Python', 'Flask', 'TailwindCSS', 'CSS', 'MySQL', 'Postgresql', 'InfluxDB', 'Grafana', 'GNS3', 'MS-DOS', 'Windows', 'Linux', 'NginX', 'Apache', 'TomEE', 'AWS', 'VisualVM', 'ReadTheDocs', 'Trello', 'Jira', 'Confluence', 'Minecraft', 'Git', 'Ansible', 'Serverless', 'Datadog']
 
 
 function getData() {
