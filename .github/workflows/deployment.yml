@@ -1,7 +1,7 @@
 name: Website Deployment
 on:
   push:
-    branches: 'master'
+    branches: '11ty-migration'
 
 jobs:
   build:
@@ -9,10 +9,26 @@ jobs:
     steps:
 
     - name: Checkout Repo
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Build Assets
-      uses: nelsonjchen/gh-pages-pelican-action@0.1.5
+      uses: actions/setup-node@v3
+      with:
+          node-version: 16
+
+    - name: Push Assets To GH Pages Branch  
       env:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        GH_PAGES_BRANCH: website
+      run: | 
+        shopt -s extglob
+        yarn install
+        yarn run build
+        rm -rf !(dist|404.md)
+        mv dist/* . && rmdir dist
+        git config --global user.name 'EfrenZaidinVergeles'
+        git config --global user.email 'EfrenZaidinVergeles@users.noreply.github.com'
+        git add -A
+        git commit -m "Actions: Deploy Website To GH Pages"
+        git push -f origin website
