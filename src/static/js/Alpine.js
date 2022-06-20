@@ -4,25 +4,25 @@ const categories = [
         link: "#about_me"
     },
     {
-        name: "Skills",
-        link: "#skills"
-    },
-    {
         name: "Technologies",
         link: "#technologies"
+    },
+    {
+        name: "Skills",
+        link: "#skills"
     },
     {
         name: "Projects",
         link: "#projects"
     },
     {
+        name: "Trajectory",
+        link: "#trajectory"
+    },
+    {
         name: "Blog",
         link: "/blog"
     }
-]
-
-const slides = [
-    "mypc", "masterserver"
 ]
 
 
@@ -127,7 +127,7 @@ const projects = [
             {
                 name: "Programming",
                 color: "yellow"
-            },            
+            },
         ],
     },
     {
@@ -139,15 +139,15 @@ const projects = [
             {
                 name: "Programming",
                 color: "yellow"
-            },            
+            },
             {
                 name: "Assembly",
                 color: "rose"
-            },            
+            },
             {
                 name: "Hardware",
                 color: "red"
-            },            
+            },
         ],
     },
     {
@@ -159,11 +159,11 @@ const projects = [
             {
                 name: "Programming",
                 color: "yellow"
-            },            
+            },
             {
                 name: "Frontend",
                 color: "cyan"
-            },            
+            },
         ],
     },
     {
@@ -175,77 +175,94 @@ const projects = [
             {
                 name: "Cybersecurity",
                 color: "pink"
-            },            
+            },
             {
                 name: "Cracking",
                 color: "teal"
-            },            
+            },
             {
                 name: "Pentesting",
                 color: "purple"
-            },            
+            },
             {
                 name: "Education",
                 color: "lime"
-            },            
+            },
         ],
     }
 ];
 
-const technologies = ['Proxmox', 'Kubernetes', 'Docker', 'VirtualBox', 'Wfuzz', 'Burp', 'Rainbowcrack', 'Cutter', 'Ghidra', 'GDB', 'HTML', 'JavaScript', 'Node', 'Yarn', 'PHP', 'Assembly', 'Python', 'Flask', 'TailwindCSS', 'CSS', 'MySQL', 'Postgresql', 'InfluxDB', 'Grafana', 'GNS3', 'MS-DOS', 'Windows', 'Linux', 'NginX', 'Apache', 'TomEE', 'AWS', 'VisualVM', 'ReadTheDocs', 'Trello', 'Jira', 'Confluence', 'Minecraft', 'Git', 'Ansible', 'Serverless', 'Datadog']
-
-
-function getData() {
+function tabs() {
     return {
-        formData: {
-            email: "",
-            password: ""
-        },
-        status: false,
-        loading: false,
-        isError: false,
-        modalHeaderText: "",
-        modalBodyText: "",
-        buttonLabel: 'Submit',
-        isEmail(email) {
-            var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        },
-
-        submitData() {
-            // Ensures all fields have data before submitting
-            if (!this.formData.email.length ||
-                !this.formData.password.length) {
-                alert("Please fill out all the fields and try again")
-                return;
+        activeTab: 3,
+        tabs: [
+            {
+                id: 0,
+                category: 'Infrastructure',
+                technologies: [
+                    'Proxmox', 'Kubernetes', 'Docker', 'VirtualBox', 'GNS3', 'MS-DOS', 'Windows', 'Linux', 'NginX', 'Apache', 'TomEE', 'Minecraft'
+                ]
+            },
+            {
+                id: 1,
+                category: 'Monitoring',
+                technologies: [
+                    'Grafana', 'VisualVM', 'DataDog'
+                ]
+            },
+            {
+                id: 2,
+                category: 'CI/CD',
+                technologies: [
+                    'Github Actions', 'Jenkins', 'Git', 'Github'
+                ]
+            },
+            {
+                id: 3,
+                category: 'Cloud',
+                technologies: [
+                    'AWS', 'RDS', 'ELB', 'EC2', 'Lambda', 'ECS', 'EKS', 'ECR', 'Aurora', 'Amplify', 'S3', 'Fargate', 'Auto Scaling', 'Trusted Advisor', 'Systems Manager', 'Organizations', 'SSO', 'Config', 'CloudWatch', 'CloudTrail', 'S3', 'EFS', 'EBS', 'Cloudfront', 'Route53', 'Certificate Manager', 'KMS', 'WAF'
+                ]
+            },
+            {
+                id: 4,
+                category: 'Infrastructure As Code',
+                technologies: [
+                    'CloudFormation', 'Ansible', 'Terraform', 'Serverless'
+                ]
+            },
+            {
+                id: 5,
+                category: 'Security',
+                technologies: [
+                    'Wfuzz', 'Burp', 'Rainbowcrack', 'Cutter', 'Ghidra', 'GDB'
+                ]
+            },
+            {
+                id: 6,
+                category: 'Programming',
+                technologies: [
+                    'HTML', 'JavaScript', 'Node', 'Yarn', 'PHP', 'Assembly', 'Python', 'Flask', 'TailwindCSS', 'CSS',
+                ]
+            },
+            {
+                id: 7,
+                category: 'Databases',
+                technologies: [
+                    'MySQL', 'Postgresql', 'InfluxDB'
+                ]
+            },
+            {
+                id: 8,
+                category: 'Organization',
+                technologies: [
+                    'ReadTheDocs', 'Trello', 'Jira', 'Confluence'
+                ]
             }
-            this.buttonLabel = 'Submitting...'
-            this.loading = true;
-            fetch('https://reqres.in/api/users', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(this.formData)
-            })
-                .then((response) => {
-                    if (response.status === 201) {
-                        this.modalHeaderText = "Mail Sent"
-                        this.modalBodyText = "The mail has been successfully delivered";
-                        this.status = true;
-                    } else {
-                        throw new Error("The mail couldn't be sent");
-                    }
-                })
-                .catch((error) => {
-                    this.modalHeaderText = "Ooops Error!"
-                    this.modalBodyText = error.message;
-                    this.isError = true;
-                })
-                .finally(() => {
-                    this.loading = false;
-                    this.buttonLabel = 'Submit'
-                })
+        ],
+        getActiveStatus(id) {
+            return id === this.activeTab
         }
     }
 }
+

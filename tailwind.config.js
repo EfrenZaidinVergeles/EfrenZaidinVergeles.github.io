@@ -1,15 +1,35 @@
 module.exports = {
     mode: 'jit',
-    content: ['src/**/*.{njk,md,html}'],
-    plugins: [require('daisyui'), require('@tailwindcss/typography')],
+    theme: {
+        extend: {
+            animation: {
+                blob: "blob 7s infinite",
+            },
+            keyframes: {
+                blob: {
+                    "0%": {
+                        transform: "translate(0px, 0px) scale(1)",
+                    },
+                    "33%": {
+                        transform: "translate(30px, -50px) scale(1.1)",
+                    },
+                    "66%": {
+                        transform: "translate(-20px, 20px) scale(0.9)",
+                    },
+                    "100%": {
+                        transform: "tranlate(0px, 0px) scale(1)",
+                    },
+                },
+            },
+        },
+    },
+    content: ['./src/**/*'],
+    plugins: [require('daisyui')],
     daisyui: {
         themes: [
             {
                 light: {
                     ...require("daisyui/src/colors/themes")["[data-theme=light]"],
-                    "primary": "pink",
-                    "base-100": "white",
-                    "primary-focus": "mediumblue",
                 },
             },
         ],

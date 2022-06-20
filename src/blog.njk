@@ -2,3 +2,16 @@
 title: Efren Garcia
 layout: layouts/default.njk
 ---
+
+<h1 class="ml-8">Blog</h1>
+
+<p>This is a place where ill post some content during my journey through computing</p>
+{%- for post in collections.post -%}
+<ul>
+    <li>
+        <article>
+            <h3>{{ post.data.title }}</h3>
+        </article>
+    </li>
+</ul>
+{%- endfor -%}

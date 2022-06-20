@@ -93,7 +93,7 @@ data1.links.forEach(function (link) {
 graph = new ElGrapho({
     container: document.getElementById('graph'),
     model: ElGrapho.layouts.ForceDirected(model),
-    width: 900,
+    width: 400,
     height: 600,
     debug: true
 });

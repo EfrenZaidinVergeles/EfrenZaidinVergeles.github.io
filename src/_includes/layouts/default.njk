@@ -12,11 +12,12 @@ github: https://github.com/EfrenZaidinVergeles
 {% include 'layouts/head.njk' %}
 
 <body>
-    <div class="drawer">
+    <div class="drawer" >
         <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content">
-            <main class="antialiased bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 w-auto">
+        <div class="drawer-content" style="scroll-behavior: smooth;">
+            <main class="antialiased bg-base-200 w-auto">
                 {% include 'layouts/navbar.njk' %}
+                {% include 'layouts/hero.njk' %}
                 {{ content | safe }}
                 <!-- <button id="test"
                         class="animate-bounce float-right p-2 fixed right-5 bottom-5 fa fa-chevron-circle-up fa-3x hover:text-pink-400"
@@ -38,9 +39,9 @@ github: https://github.com/EfrenZaidinVergeles
         </div>
     </div>
 
-    <script src="static/js/Alpine.js"></script>
-    <script src="static/js/GoogleChart.js" defer></script>
-    <script src="static/js/Graph.js" defer></script>
+    <script src="/static/js/Alpine.js"></script>
+    <script src="/static/js/GoogleChart.js" defer></script>
+    <script src="/static/js/Graph.js" defer></script>
 </body>
 
 </html>

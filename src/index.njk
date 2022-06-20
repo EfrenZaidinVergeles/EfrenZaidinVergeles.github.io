@@ -3,206 +3,188 @@ title: Efren Garcia
 layout: layouts/default.njk
 ---
 
-
-<div class="items-center mt-2 p-12 rounded-lg space-y-12 block">
-
-
-    <!-- About Me -->
-    <div class="flex glass rounded-lg py-4 shadow-lg" id="about_me">
-        <div class="bg-white border border-purple-400 border-l-8 rounded-lg items-center m-6 py-20 px-10 w-1/2">
-            <div class="flex items-center">
-                <h1 class="text-6xl">
-                    About Me
-                </h1>
-                <span class="text-6xl ml-4">&#129490;</span>
-            </div>
-            <p class="text-xl my-16 ml-3">
+<!-- About Me -->
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="about_me">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <div class="text-center">
+            <h1 class="my-12">About Me &#129490;</h1>
+            <p class="md:w-1/2 mb-6 text-center mx-auto">
                 I'm Efren, a boy that enjoys making proyects live providing the
                 infrastructure and security implementations they need to succeed and prosper.
-                I spend my spare time learning about anything computing-related that attracts/intrigues me,
+                I spend part of my free time learning about anything related to computing that attracts/intrigues me,
                 from low-level hardware to high-level programming and everything in between.
                 I have an extensive computing knowledge and hunger which is fed by self learning
                 and participating in every project I get a chance in.
             </p>
-            <div class="bg-white border border-indigo-400 border-l-8 block w-1/3">
-                <p class="text-2xl block m-4">"Never Stop Learning & Improving"</p>
-                <p class="text-right m-4"><b>~ Efren</b></p>
-            </div>
+            <q class="italic text-4xl font-bold">Never stop learning & improving</q>
         </div>
-
-        <!-- Carousel -->
-        <div class="bg-white relative flex flex-row border border-purple-400 border-l-8 rounded-lg items-center m-6 py-20 px-10 w-1/2"
-            x-data="{ activeSlide: 0, slides }">
-
-            <!-- Prev/Next Arrows -->
-            <div class="absolute z-10 inset-y-0 left-0 grid grid-cols-2 justify-items-center items-center w-full">
-                <button
-                    class="bg-white text-black font-bold hover:bg-orange-500 hover:shadow-lg rounded-full h-12 w-12 fa fa-chevron-left"
-                    x-on:click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
-                </button>
-                <button
-                    class="bg-white text-black font-bold hover:text-orange-500 hover:shadow-lg rounded-full h-12 w-12 fa fa-chevron-right"
-                    x-on:click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
-                </button>
+        <div class="my-24 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-12 justify-items-center">
+            <div class="card card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Transparency</h2>
+                    <p> <b>Clear</b> info from the top to the bottom of a company avoids unwanted outcome and
+                        sets <b>achievable</b> goals for everyone</p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-flip">&#128269;</i>
             </div>
-
-            <!-- Buttons -->
-            <div class="absolute z-10 left-0 flex flex-inline justify-center items-center w-full mt-48">
-                <template x-for="(slide, index) in slides" :key="index">
-                    <button
-                        class="bg-white w-4 h-4 mx-2 rounded-full overflow-hidden duration-200 ease-out hover:bg-pink-400 hover:shadow-lg"
-                        :class="{ 
-        'bg-orange-600': activeSlide === index,
-        'bg-teal-300': activeSlide !== index 
-    }" x-on:click="activeSlide = index">
-                    </button>
-                </template>
+            <div class="card card-side m-4 bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Think Twice, Act Once</h2>
+                    <p>Time spent <b>thinking</b> and analyzing will impact highly in the outcome, setting
+                        <b>quality</b> and time levels
+                    </p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-bounce">&#129300;</i>
             </div>
-
-            <div class="flex-col justify-center items-center">
-                <template x-for="(slide, index) in slides" :key="index">
-                    <div x-show="activeSlide === index"
-                        class="w-full text-5xl block  items-center justify-center bg-teal-500 text-white rounded-lg">
-                        <img x-bind:src="'static/images/' + slide + '.png'"
-                            x-bind:alt="'static/images/' + slide + '.png'" class="w-full">
-                        <div class="flex items-center justify-center bg-white w-full opacity-100 hover:opacity-20"
-                            x-show="activeSlide === index">
-                            <span class="text-center text-black text-2xl" x-text="slide"></span>
-                        </div>
-                    </div>
-                </template>
+            <div class="card card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Leadership</h2>
+                    <p>A leader should be someone <b>responsible</b> of their actions, for both the good and bad
+                        sides, and an expert when it comes to solving <b>technical</b> problems</p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-shake">&#128081;</i>
+            </div>
+            <div class="card card-side m-4 bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Quality Over Quantity</h2>
+                    <p> <b>Value</b> over plain words, <b>skills</b> over number of worked years, <b>tasks</b> over
+                        hours
+                        sitting in fron of the screen</p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-fade">&#127775;</i>
             </div>
         </div>
     </div>
+</div>
 
 
+<!-- Technologies -->
 
-
-    <!-- Technologies -->
-    <div class="flex glass rounded-lg py-4 shadow-lg" id="technologies">
-        <div class="bg-white border border-purple-400 border-l-8 rounded-lg items-center m-6 py-20 px-10 w-full">
-            <div class="flex items-center">
-                <h1 class="text-6xl">
-                    Technologies
-                </h1>
-                <span class="text-6xl ml-4">&#10024;</span>
-            </div>
-            <ul class="my-16 grid gap-10 lg:grid-cols-3 xl:grid-cols-4 grid-cols-2 items-center mx-auto"
-                x-data="technologies">
-                <template x-for="item in technologies">
-                    <li>
-                        <div class="transition duration-500 ease-in-out hover:bg-purple-200">
-                            <div
-                                class="transition duration-300 ease-in-out bg-white border border-indigo-400 border-l-8 hover:border-b-8 hover:border-purple-600 hover:translate-x-2 hover:-translate-y-2 flex justify-between items-center w-auto">
-                                <p class="text-2xl block m-4" x-text="item"></p>
-                                <img x-bind:src="'static/images/' + item + '.svg'" x-bind:alt="'item'"
-                                    class="h-12 w-12 mr-4">
-                            </div>
-                        </div>
-                    </li>
-                </template>
-            </ul>
+<div class="hero h-auto min-h-screen w-full bg-base-300"" id="technologies">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl"
+        x-data="tabs()">
+        <h1 class="text-center my-16">Technologies &#10024;</h1>
+        <div class="tabs">
+            <template x-for="tab in tabs" :key="tab.id">
+                <button class="tab tab-lifted font-bold" x-text="tab.category"
+                    :class="{ 'tab-active': getActiveStatus(tab.id)}" x-on:click="activeTab = tab.id"></button>
+            </template>
         </div>
-    </div>
-
-
-    <!-- Skills -->
-    <div class="flex glass rounded-lg py-4 shadow-lg" id="skills">
-        <div class="bg-white border border-purple-400 border-l-8 rounded-lg items-center m-6 py-20 px-10 w-full">
-            <div class="flex items-center">
-                <h1 class="text-6xl">
-                    Skills
-                </h1>
-                <span class="text-6xl ml-4">&#9889;</span>
-            </div>
-            <div class="my-16 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 items-start mx-auto"
-                x-data="{ skills, skill_selected: null }">
-                <template x-for="(skill, index) in skills">
-                    <div class="bg-white shadow-md rounded-md p-3 my-5">
-                        <div class="flex items-center justify-between mx-auto cursor-pointer"
-                            @click="skill_selected !== index ? skill_selected = index : skill_selected = null">
-                            <div
-                                class="bg-indigo-50 text-pink-400 w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg font-display">
-                                <span x-text="index + 1"></span>
-                            </div>
-                            <div class="ml-6 text-lg text-indigo-600">
-                                <span x-text="skill.skill"></span>
-                            </div>
-                            <a x-bind:class="'fa-angle-down'" class="fa fa-angle-up fa-lg"></a>
-                        </div>
-                        <div class="relative overflow-hidden transition-all max-h-0 duration-700"
-                            x-bind:style="skill_selected === index ? `max-height:  ${ $el.scrollHeight }px` : ``">
-                            <div class="ml-8 pl-3 py-2 space-y-3">
-                                <template x-for="(description, index) in skill.description">
-                                    <p x-text="description"></p>
-                                </template>
-                            </div>
-                        </div>
-                    </div>
-                </template>
-            </div>
-            <div class="flex mt-32 justify-center" id="graph">
-            </div>
-        </div>
-    </div>
-
-    <!-- Projects -->
-
-
-    <div class="flex glass rounded-lg py-4 shadow-lg" id="projects">
-        <div class="bg-white border border-purple-400 border-l-8 rounded-lg items-center m-6 py-20 px-10 w-full">
-            <div class="flex items-center">
-                <h1 class="text-6xl">
-                    Projects
-                </h1>
-                <span class="text-6xl ml-4">&#128190;</span>
-            </div>
-            <div class="grid gap-20 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 items-start my-16 ml-3"
-                x-data="{ projects }">
-                <template x-for="project in projects">
-                    <div
-                        class="group bg-white shadow-2xl rounded-b-xl -skew-y-12 transition ease-in-out delay-75 duration-300 hover:skew-y-0  hover:z-10 my-16">
-                        <a x-bind:href="project.link" target="_blank">
-                            <img x-bind:src="'static/images/' + project.image" x-bind:alt="name">
-                        </a>
-                        <div
-                            class="p-4 text-center border-t-4 transition ease-in-out delay-75 duration-300 group-hover:border-indigo-400">
-                            <h4 class="mb-4"><a x-bind:href="project.link" class="text-2xl group-hover:text-pink-400"
-                                    target="_blank" x-text="project.name">
-                                </a>
-                            </h4>
-                            <p class="transition-all ease-in-out delay-1000 duration-500 mb-4 hidden group-hover:block"
-                                x-text="project.description">
-                            </p>
-                            <div class="flex flex-wrap gap-2 justify-center flex-column">
-                                <template x-for="category in project.categories">
-                                    <div class="border border-pink-400 rounded-full p-2 animate-pulse group-hover:animate-none"
-                                        x-bind:class="'border-' + category.color + '-400'">
-                                        <span x-text="category.name"></span>
+        <div class="card min-h-32 bg-base-100 shadow-xl w-full">
+            <div class="card-body">
+                <ul class="my-16 grid gap-10 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 items-center mx-auto">
+                    <template x-for="tab in tabs" :key="tab.id">
+                        <template x-for="technology in tab.technologies">
+                            <template x-if="tab.id == activeTab">
+                                <li>
+                                    <div class="transition duration-500 ease-in-out hover:bg-purple-200">
+                                        <div
+                                            class="transition duration-300 ease-in-out bg-white border border-indigo-400 border-l-8 hover:border-b-8 hover:border-purple-600 hover:translate-x-2 hover:-translate-y-2 flex justify-between items-center w-auto">
+                                            <p class="text-2xl block m-4" x-text="technology"></p>
+                                            <img x-bind:src="'static/images/' + technology + '.svg'" x-bind:alt="'item'"
+                                                class="h-12 w-12 mr-4">
+                                        </div>
                                     </div>
-                                </template>
-                            </div>
+                                </li>
+                            </template>
+                        </template>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Skills -->
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="skills">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <h1 class="text-center my-16">
+            Skills &#9889;
+        </h1>
+        <div class="my-16 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 items-start mx-auto"
+            x-data="{ skills, skill_selected: null }">
+            <template x-for="(skill, index) in skills">
+                <div class="bg-white shadow-md rounded-md p-3 my-5">
+                    <div class="flex items-center justify-between mx-auto cursor-pointer"
+                        @click="skill_selected !== index ? skill_selected = index : skill_selected = null">
+                        <div
+                            class="bg-indigo-50 text-pink-400 w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg font-display">
+                            <span x-text="index + 1"></span>
+                        </div>
+                        <div class="ml-6 text-lg text-indigo-600">
+                            <span x-text="skill.skill"></span>
+                        </div>
+                        <a x-bind:class="'fa-angle-down'" class="fa fa-angle-up fa-lg"></a>
+                    </div>
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                        x-bind:style="skill_selected === index ? `max-height:  ${ $el.scrollHeight }px` : ``">
+                        <div class="ml-8 pl-3 py-2 space-y-3">
+                            <template x-for="(description, index) in skill.description">
+                                <p x-text="description"></p>
+                            </template>
                         </div>
                     </div>
-                </template>
-            </div>
+                </div>
+            </template>
+        </div>
+        <div class="mt-32" id="graph">
+        </div>
+
+    </div>
+</div>
+
+<!-- Projects -->
+
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="projects">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <h1 class="text-center my-16">
+            Projects &#128190;
+        </h1>
+        <div class="grid gap-20 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 items-start my-16 ml-3" x-data="{ projects }">
+            <template x-for="project in projects">
+                <div
+                    class="group bg-white shadow-2xl rounded-b-xl -skew-y-12 transition ease-in-out delay-75 duration-300 hover:skew-y-0  hover:z-10 my-16">
+                    <a x-bind:href="project.link" target="_blank">
+                        <img x-bind:src="'static/images/' + project.image" x-bind:alt="name">
+                    </a>
+                    <div
+                        class="p-4 text-center border-t-4 transition ease-in-out delay-75 duration-300 group-hover:border-indigo-400">
+                        <h4 class="mb-4"><a x-bind:href="project.link" class="text-2xl group-hover:text-pink-400"
+                                target="_blank" x-text="project.name">
+                            </a>
+                        </h4>
+                        <p class="transition-all ease-in-out delay-1000 duration-500 mb-4 hidden group-hover:block"
+                            x-text="project.description">
+                        </p>
+                        <div class="flex flex-wrap gap-2 justify-center flex-column">
+                            <template x-for="category in project.categories">
+                                <div class="border border-pink-400 rounded-full p-2 animate-pulse group-hover:animate-none"
+                                    x-bind:class="'border-' + category.color + '-400'">
+                                    <span x-text="category.name"></span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </div>
     </div>
+</div>
 
 
-    <!-- Trajectory -->
-    <div class="flex glass rounded-lg py-4 shadow-lg" id="trajectory">
-        <div class="bg-white border border-purple-400 border-l-8 rounded-lg items-center m-6 py-20 px-10 w-full">
-            <div class="flex items-center">
-                <h1 class="text-6xl">
-                    Trajectory
-                </h1>
-                <span class="text-6xl ml-4">&#128202;</span>
-            </div>
-            <div class="my-16" id="timeline" style="height: 480px"></div>
-        </div>
+
+<!-- Trajectory -->
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="trajectory">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <h1 class="text-center my-16">
+            Trajectory &#128202;
+        </h1>
+        <div class="w-full" id="timeline" style="height: 60vh; width: 80vw"></div>
     </div>
-
-
-
 </div>
