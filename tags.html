@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon Settings -->
+
+    <link rel="icon" type="image/png" href="./theme/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./theme/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./theme/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./theme/images/favicon-16x16.png">
+    <link rel="mask-icon" href="./theme/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://unpkg.com/tailwindcss-jit-cdn"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./theme/js/ElGrapho.min.js"></script>
+    <title>
+EfrenZaidinVergeles - Tags    </title>
+</head>
+
+
+<body class="antialiased bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 w-auto">
+
+
+    <nav class="text-gray-700 bg-white mx-auto">
+        <div class="flex justify-start items-center space-x-20 mx-auto shadow-lg">
+            <a href="/" class="py-4 px-16 border-transparent">
+                <img src="./theme/images/MasterServerTransparent.png" alt="Logo" class="object-fill h-6">
+            </a>
+            <div>
+                <div id="nav_menu" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto" x-data="categories">
+                    <template x-for="category in categories">
+                        <a x-bind:href="'#' + category.link"
+                        class="transition duration-200 ease-in-out py-4 px-12 border-b-2 border-transparent hover:text-pink-400 hover:border-purple-400" x-text="category.name"></a>
+                    </template>
+                </div>
+            </div>
+            <div>
+                <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:hidden">
+                    <button id="nav_button">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="fill-current h-12 w-12" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <h1>Tags for EfrenZaidinVergeles</h1>
+    <ul>
+    </ul>
+
+    <button class="animate-bounce float-right p-2 fixed right-5 bottom-5 fa fa-chevron-circle-up fa-3x hover:text-pink-400" onclick="window.scroll({ top:0, left:0, behavior: 'smooth'})">
+    </button>
+
+</body>
+
+<footer class="text-white bg-gray-600 mx-auto">
+    <div class="flex justify-center items-center mx-auto shadow-lg">
+        <div>
+            <div id="footer_menu"
+                class="w-full block flex-grow w-auto grid gap-10 gap-11 grid-cols-2 items-center justify-items-center mx-auto flex-grow p-12">
+                <div class="h-full">
+                    <h3>FOLLOW ME</h3>
+                    <ul class="py-4 items-center grid gap-2 flex-grow grid-cols-2 justify-items-center">
+                        <li>
+                            <a href="https://www.linkedin.com/in/efrenmasterserver"
+                                class="fa fa-linkedin bg-gray-400 fa-lg transition duration-200 ease-in-out p-2 hover:text-pink-400 hover:bg-blue-600"></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/EfrenZaidinVergeles"
+                                class="fa fa-github bg-gray-400 fa-lg transition duration-200 ease-in-out p-2 hover:text-pink-400 hover:bg-blue-600"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="text-center h-full">
+                    <h3 class="mb-4">CONTACT ME</h3>
+                    <img src="./theme/images/mail.png" alt="mail">
+                </div>
+            </div>
+            <div class="flex flex-col p-4 items-center">
+                <p class="pb-2 ">© Efren Garcia 2021</p>
+                <p class="w-auto text-gray-100">Built With Pelican, TailWindCSS, AlpineJs, GraphJS & ElGrapho</p>
+            </div>
+        </div>
+</footer>
+
+</html>
