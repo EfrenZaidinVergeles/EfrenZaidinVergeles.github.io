@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="This is Efrens Garcia portfolio webpage, where you can get all professional info about me and a blog">
+    <meta name="theme-color" content="#c084fc" />
+    <!-- CSS Files -->
+    <link href="/static/styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="/static/styles/all.min.css" type="text/css" rel="stylesheet">
+    <!-- Favicon Settings -->
+    <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/static/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="static-color" content="#ffffff">
+    <!-- JS Files -->
+    <script src="/static/js/alpinecdn.js?v=1655947846428" defer></script>
+    <script src="https://www.gstatic.com/charts/loader.js" defer></script>
+    <script src="/static/js/ElGrapho.min.js" defer></script>
+    
+    <title>Efren Garcia</title>
+</head>
+
+
+<body>
+    <div class="drawer" >
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content" style="scroll-behavior: smooth;">
+            <main class="antialiased bg-base-200 w-auto">
+                <nav class="navbar bg-base-100 p-0 border-b-2 border-black">
+    <div class="flex-1" x-data="categories">
+        <a href="/" class="py-4 px-12 border-transparent">
+            <img src="/static/images/MasterServerTransparent.png" alt="Logo" class="object-fill h-8">
+        </a>
+        <template x-for="category in categories">
+            <a x-bind:href="category.link"
+                class="hidden lg:block transition duration-200 ease-in-out py-4 px-12 border-b-4 border-transparent hover:text-secondary hover:border-primary"
+                x-text="category.name"></a>
+        </template>
+    </div>
+    <div class="flex-none mr-2 lg:hidden">
+        <label for="my-drawer" class="btn btn-square drawer-button bg-gray-400 swap swap-rotate">
+            <input type="checkbox" />
+            <i class="fa fa-2x fa-bars swap-off"></i>
+            <i class="fa fa-2x fa-xmark swap-on"></i>
+        </label>
+    </div>
+</nav>
+                <div class="hero h-screen w-full from-primary to-secondary bg-gradient-to-br">
+    <!-- Add Bokeh Animation -->
+    <!-- <div class="w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+    <div class="w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+    <div class="w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div> -->
+
+    <div
+        class="hero-content lg:max-w-full lg:mx-24 justify-items-center grid grid-cols-1 lg:grid-cols-2 glass shadow-2xl">
+        <img src="/static/images/masterserver.png" alt="Masterserver" class="w-max rounded-lg shadow-2xl">
+        <div class="text-center">
+            <h1 class="mb-12">Efren Garcia</h1>
+            <p class="mb-6">Providing what <strong>real-world</strong> companies need in <strong>Systems &
+                    Security</strong></p>
+            <a href="#footer">
+                <button class="btn btn-secondary">Contact</button>
+            </a>
+        </div>
+    </div>
+    <svg class="fill-secondary h-full w-full" width="1600" height="110" viewbox="0 0 1600 110" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M0 338L53.3 349.2C106.7 360.3 213.3 382.7 320 393.8C426.7 405 533.3 405 640 359.3C746.7 313.7 853.3 222.3 960 189.2C1066.7 156 1173.3 181 1280 159.2C1386.7 137.3 1493.3 68.7 1546.7 34.3L1600 0V595H1546.7C1493.3 595 1386.7 595 1280 595C1173.3 595 1066.7 595 960 595C853.3 595 746.7 595 640 595C533.3 595 426.7 595 320 595C213.3 595 106.7 595 53.3 595H0V338Z">
+        </path>
+    </svg>
+</div>
+                
+<!-- About Me -->
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="about_me">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <div class="text-center">
+            <h1 class="my-12">About Me &#129490;</h1>
+            <p class="md:w-1/2 mb-6 text-center mx-auto">
+                I'm Efren, a boy that enjoys making proyects live providing the
+                infrastructure and security implementations they need to succeed and prosper.
+                I spend part of my free time learning about anything related to computing that attracts/intrigues me,
+                from low-level hardware to high-level programming and everything in between.
+                I have an extensive computing knowledge and hunger which is fed by self learning
+                and participating in every project I get a chance in.
+            </p>
+            <q class="italic text-4xl font-bold">Never stop learning & improving</q>
+        </div>
+        <div class="my-24 grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-12 justify-items-center">
+            <div class="card card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Transparency</h2>
+                    <p> <b>Clear</b> info from the top to the bottom of a company avoids unwanted outcome and
+                        sets <b>achievable</b> goals for everyone</p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-flip">&#128269;</i>
+            </div>
+            <div class="card card-side m-4 bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Think Twice, Act Once</h2>
+                    <p>Time spent <b>thinking</b> and analyzing will impact highly in the outcome, setting
+                        <b>quality</b> and time levels
+                    </p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-bounce">&#129300;</i>
+            </div>
+            <div class="card card-side bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Leadership</h2>
+                    <p>A leader should be someone <b>responsible</b> of their actions, for both the good and bad
+                        sides, and an expert when it comes to solving <b>technical</b> problems</p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-shake">&#128081;</i>
+            </div>
+            <div class="card card-side m-4 bg-base-100 shadow-xl">
+                <div class="card-body">
+                    <h2 class="card-title">Quality Over Quantity</h2>
+                    <p> <b>Value</b> over plain words, <b>skills</b> over number of worked years, <b>tasks</b> over
+                        hours
+                        sitting in fron of the screen</p>
+                </div>
+                <i class="my-auto mr-8 fa-5x fa-fade">&#127775;</i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Technologies -->
+
+<div class="hero h-auto min-h-screen w-full bg-base-300"" id="technologies">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl"
+        x-data="tabs()">
+        <h1 class="text-center my-16">Technologies &#10024;</h1>
+        <div class="tabs">
+            <template x-for="tab in tabs" :key="tab.id">
+                <button class="tab tab-lifted font-bold" x-text="tab.category"
+                    :class="{ 'tab-active': getActiveStatus(tab.id)}" x-on:click="activeTab = tab.id"></button>
+            </template>
+        </div>
+        <div class="card min-h-32 bg-base-100 shadow-xl w-full">
+            <div class="card-body">
+                <ul class="my-16 grid gap-10 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 items-center mx-auto">
+                    <template x-for="tab in tabs" :key="tab.id">
+                        <template x-for="technology in tab.technologies">
+                            <template x-if="tab.id == activeTab">
+                                <li>
+                                    <div class="transition duration-500 ease-in-out hover:bg-purple-200">
+                                        <div
+                                            class="transition duration-300 ease-in-out bg-white border border-indigo-400 border-l-8 hover:border-b-8 hover:border-purple-600 hover:translate-x-2 hover:-translate-y-2 flex justify-between items-center w-auto">
+                                            <p class="text-2xl block m-4" x-text="technology"></p>
+                                            <img x-bind:src="'static/images/' + technology + '.svg'" x-bind:alt="'item'"
+                                                class="h-12 w-12 mr-4">
+                                        </div>
+                                    </div>
+                                </li>
+                            </template>
+                        </template>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Skills -->
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="skills">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <h1 class="text-center my-16">
+            Skills &#9889;
+        </h1>
+        <div class="my-16 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 items-start mx-auto"
+            x-data="{ skills, skill_selected: null }">
+            <template x-for="(skill, index) in skills">
+                <div class="bg-white shadow-md rounded-md p-3 my-5">
+                    <div class="flex items-center justify-between mx-auto cursor-pointer"
+                        @click="skill_selected !== index ? skill_selected = index : skill_selected = null">
+                        <div
+                            class="bg-indigo-50 text-pink-400 w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg font-display">
+                            <span x-text="index + 1"></span>
+                        </div>
+                        <div class="ml-6 text-lg text-indigo-600">
+                            <span x-text="skill.skill"></span>
+                        </div>
+                        <a x-bind:class="'fa-angle-down'" class="fa fa-angle-up fa-lg"></a>
+                    </div>
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700"
+                        x-bind:style="skill_selected === index ? `max-height:  ${ $el.scrollHeight }px` : ``">
+                        <div class="ml-8 pl-3 py-2 space-y-3">
+                            <template x-for="(description, index) in skill.description">
+                                <p x-text="description"></p>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div class="mt-32" id="graph">
+        </div>
+
+    </div>
+</div>
+
+<!-- Projects -->
+
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="projects">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <h1 class="text-center my-16">
+            Projects &#128190;
+        </h1>
+        <div class="grid gap-20 lg:grid-cols-2 xl:grid-cols-3 grid-cols-1 items-start my-16 ml-3" x-data="{ projects }">
+            <template x-for="project in projects">
+                <div
+                    class="group bg-white shadow-2xl rounded-b-xl -skew-y-12 transition ease-in-out delay-75 duration-300 hover:skew-y-0  hover:z-10 my-16">
+                    <a x-bind:href="project.link" target="_blank">
+                        <img x-bind:src="'static/images/' + project.image" x-bind:alt="name">
+                    </a>
+                    <div
+                        class="p-4 text-center border-t-4 transition ease-in-out delay-75 duration-300 group-hover:border-indigo-400">
+                        <h4 class="mb-4"><a x-bind:href="project.link" class="text-2xl group-hover:text-pink-400"
+                                target="_blank" x-text="project.name">
+                            </a>
+                        </h4>
+                        <p class="transition-all ease-in-out delay-1000 duration-500 mb-4 hidden group-hover:block"
+                            x-text="project.description">
+                        </p>
+                        <div class="flex flex-wrap gap-2 justify-center flex-column">
+                            <template x-for="category in project.categories">
+                                <div class="border border-pink-400 rounded-full p-2 animate-pulse group-hover:animate-none"
+                                    x-bind:class="'border-' + category.color + '-400'">
+                                    <span x-text="category.name"></span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Trajectory -->
+<div class="hero h-auto min-h-screen w-full bg-base-300" id="trajectory">
+    <div class="hero-content max-w-full lg:mx-12 my-6 justify-items-center grid grid-cols-1 gap-0 glass shadow-2xl">
+        <h1 class="text-center my-16">
+            Trajectory &#128202;
+        </h1>
+        <div class="w-full" id="timeline" style="height: 60vh; width: 80vw"></div>
+    </div>
+</div>
+                <!-- <button id="test"
+                        class="animate-bounce float-right p-2 fixed right-5 bottom-5 fa fa-chevron-circle-up fa-3x hover:text-pink-400"
+                        onclick="window.scroll({ top:0, left:0, behavior: 'smooth'})">
+                    </button> -->
+            </main>
+            <footer class="block shadow-lg text-white bg-gray-600" id="footer">
+    <div id="footer_menu" class="grid gap-20 grid-cols-3 justify-items-center p-12">
+        <div class="row-span-2">
+            <img src="/static/images/MasterServerTransparent.png" alt="Logo" class="bg-trasnparent h-12 mb-10">
+            <p class="mb-2">Efren Garcia</p>
+            <p>Providing what real-world companies need in Systems & Security</p>
+        </div>
+        <div class="text-center">
+            <h3 class="mb-4">SOCIAL</h3>
+            <ul class="grid gap-10 grid-cols-2 justify-items-center">
+                <li>
+                    <a href="https://www.linkedin.com/in/efrenmasterserver" target="_blank">
+                        <div
+                            class="btn btn-md btn-square bg-gray-400 transition duration-200 ease-in-out p-2 hover:text-pink-400 hover:bg-blue-600">
+                            <i class="fa-brands fa-linkedin fa-xl"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/EfrenZaidinVergeles" target="_blank">
+                        <div
+                            class="btn btn-md btn-square bg-gray-400 transition duration-200 ease-in-out p-2 hover:text-pink-400 hover:bg-blue-600">
+                            <i class="fa-brands fa-github fa-xl"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="block items-center justify-items-center text-center">
+            <h3 class="mb-4">MAIL</h3>
+            <img src="/static/images/mail.png" alt="mail" width="400px">
+        </div>
+        <div class="block items-center justify-items-center text-center">
+            <h3 class="mb-4">VISITORS</h3>
+            <img src="https://visitor-badge.glitch.me/badge?page_id=efrenzaidinvergeles.github.io&right_color=pink" alt="Visitors" width="100px">
+        </div>
+    </div>
+    <div class="flex flex-col p-4 items-center">
+        <p class="mb-4">© Efren 2021</p>
+        <p class="w-auto text-gray-100">Built With 11ty, TailWindCSS, AlpineJs, GraphJS & ElGrapho
+        </p>
+    </div>
+</footer>
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer" class="drawer-overlay"></label>
+            <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content items-center" x-data="">
+                <!-- Sidebar content -->
+                <template x-for="category in categories">
+                    <a x-bind:href="category.link"
+                        class="transition duration-200 ease-in-out w-full py-4 px-12 border-b-2 border-transparent hover:text-pink-400 hover:border-purple-400"
+                        x-text="category.name"></a>
+                </template>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/static/js/Alpine.js"></script>
+    <script src="/static/js/GoogleChart.js" defer></script>
+    <script src="/static/js/Graph.js" defer></script>
+</body>
+
+</html>

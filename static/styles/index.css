@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-5xl lg:text-6xl font-extrabold whitespace-nowrap;
+    }
+    h2 {
+        @apply text-3xl lg:text-4xl font-bold whitespace-nowrap;
+    }
+    p {
+        @apply leading-relaxed text-base-content;
+    }
+    strong {
+        @apply text-xl text-primary;
+    }
+}

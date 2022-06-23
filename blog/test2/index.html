@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="This is Efrens Garcia portfolio webpage, where you can get all professional info about me and a blog">
+    <meta name="theme-color" content="#c084fc" />
+    <!-- CSS Files -->
+    <link href="/static/styles/styles.css" type="text/css" rel="stylesheet">
+    <link href="/static/styles/all.min.css" type="text/css" rel="stylesheet">
+    <!-- Favicon Settings -->
+    <link rel="icon" type="image/png" href="/static/images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+    <link rel="mask-icon" href="/static/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="static-color" content="#ffffff">
+    <!-- JS Files -->
+    <script src="/static/js/alpinecdn.js?v=1655947846428" defer></script>
+    <script src="https://www.gstatic.com/charts/loader.js" defer></script>
+    <script src="/static/js/ElGrapho.min.js" defer></script>
+    
+    <title>Test 2</title>
+</head>
+
+
+<body>
+    <div class="drawer" >
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content" style="scroll-behavior: smooth;">
+            <main class="antialiased bg-base-200 w-auto">
+                <nav class="navbar bg-base-100 p-0 border-b-2 border-black">
+    <div class="flex-1" x-data="categories">
+        <a href="/" class="py-4 px-12 border-transparent">
+            <img src="/static/images/MasterServerTransparent.png" alt="Logo" class="object-fill h-8">
+        </a>
+        <template x-for="category in categories">
+            <a x-bind:href="category.link"
+                class="hidden lg:block transition duration-200 ease-in-out py-4 px-12 border-b-4 border-transparent hover:text-secondary hover:border-primary"
+                x-text="category.name"></a>
+        </template>
+    </div>
+    <div class="flex-none mr-2 lg:hidden">
+        <label for="my-drawer" class="btn btn-square drawer-button bg-gray-400 swap swap-rotate">
+            <input type="checkbox" />
+            <i class="fa fa-2x fa-bars swap-off"></i>
+            <i class="fa fa-2x fa-xmark swap-on"></i>
+        </label>
+    </div>
+</nav>
+                <div class="hero h-screen w-full from-primary to-secondary bg-gradient-to-br">
+    <!-- Add Bokeh Animation -->
+    <!-- <div class="w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+    <div class="w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+    <div class="w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div> -->
+
+    <div
+        class="hero-content lg:max-w-full lg:mx-24 justify-items-center grid grid-cols-1 lg:grid-cols-2 glass shadow-2xl">
+        <img src="/static/images/masterserver.png" alt="Masterserver" class="w-max rounded-lg shadow-2xl">
+        <div class="text-center">
+            <h1 class="mb-12">Efren Garcia</h1>
+            <p class="mb-6">Providing what <strong>real-world</strong> companies need in <strong>Systems &
+                    Security</strong></p>
+            <a href="#footer">
+                <button class="btn btn-secondary">Contact</button>
+            </a>
+        </div>
+    </div>
+    <svg class="fill-secondary h-full w-full" width="1600" height="110" viewbox="0 0 1600 110" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M0 338L53.3 349.2C106.7 360.3 213.3 382.7 320 393.8C426.7 405 533.3 405 640 359.3C746.7 313.7 853.3 222.3 960 189.2C1066.7 156 1173.3 181 1280 159.2C1386.7 137.3 1493.3 68.7 1546.7 34.3L1600 0V595H1546.7C1493.3 595 1386.7 595 1280 595C1173.3 595 1066.7 595 960 595C853.3 595 746.7 595 640 595C533.3 595 426.7 595 320 595C213.3 595 106.7 595 53.3 595H0V338Z">
+        </path>
+    </svg>
+</div>
+                
+                <!-- <button id="test"
+                        class="animate-bounce float-right p-2 fixed right-5 bottom-5 fa fa-chevron-circle-up fa-3x hover:text-pink-400"
+                        onclick="window.scroll({ top:0, left:0, behavior: 'smooth'})">
+                    </button> -->
+            </main>
+            <footer class="block shadow-lg text-white bg-gray-600" id="footer">
+    <div id="footer_menu" class="grid gap-20 grid-cols-3 justify-items-center p-12">
+        <div class="row-span-2">
+            <img src="/static/images/MasterServerTransparent.png" alt="Logo" class="bg-trasnparent h-12 mb-10">
+            <p class="mb-2">Efren Garcia</p>
+            <p>Providing what real-world companies need in Systems & Security</p>
+        </div>
+        <div class="text-center">
+            <h3 class="mb-4">SOCIAL</h3>
+            <ul class="grid gap-10 grid-cols-2 justify-items-center">
+                <li>
+                    <a href="https://www.linkedin.com/in/efrenmasterserver" target="_blank">
+                        <div
+                            class="btn btn-md btn-square bg-gray-400 transition duration-200 ease-in-out p-2 hover:text-pink-400 hover:bg-blue-600">
+                            <i class="fa-brands fa-linkedin fa-xl"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/EfrenZaidinVergeles" target="_blank">
+                        <div
+                            class="btn btn-md btn-square bg-gray-400 transition duration-200 ease-in-out p-2 hover:text-pink-400 hover:bg-blue-600">
+                            <i class="fa-brands fa-github fa-xl"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="block items-center justify-items-center text-center">
+            <h3 class="mb-4">MAIL</h3>
+            <img src="/static/images/mail.png" alt="mail" width="400px">
+        </div>
+        <div class="block items-center justify-items-center text-center">
+            <h3 class="mb-4">VISITORS</h3>
+            <img src="https://visitor-badge.glitch.me/badge?page_id=efrenzaidinvergeles.github.io&right_color=pink" alt="Visitors" width="100px">
+        </div>
+    </div>
+    <div class="flex flex-col p-4 items-center">
+        <p class="mb-4">© Efren 2021</p>
+        <p class="w-auto text-gray-100">Built With 11ty, TailWindCSS, AlpineJs, GraphJS & ElGrapho
+        </p>
+    </div>
+</footer>
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer" class="drawer-overlay"></label>
+            <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content items-center" x-data="">
+                <!-- Sidebar content -->
+                <template x-for="category in categories">
+                    <a x-bind:href="category.link"
+                        class="transition duration-200 ease-in-out w-full py-4 px-12 border-b-2 border-transparent hover:text-pink-400 hover:border-purple-400"
+                        x-text="category.name"></a>
+                </template>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/static/js/Alpine.js"></script>
+    <script src="/static/js/GoogleChart.js" defer></script>
+    <script src="/static/js/Graph.js" defer></script>
+</body>
+
+</html>
